@@ -1,3 +1,11 @@
+// Helper function to log and push to dataLayer
+function logAndPush(message, dataLayerEvent) {
+  console.log(message);
+  if (dataLayerEvent) {
+    window.dataLayer.push(dataLayerEvent);
+  }
+}
+
 function checkForAdblocker() {
   // Create an element that mimics an ad and inject it into the page
   document.body.insertAdjacentHTML(
@@ -10,16 +18,13 @@ function checkForAdblocker() {
   if (testAd) {
     const testAdWidth = testAd.offsetWidth;
     if (testAdWidth == "1") {
-      console.log("########################################");
       console.log("No adblocker detected, will run AB Tests");
       triggerTests();
     } else if (testAdWidth == "0") {
-      console.log("########################################");
       console.log("Adblocker detected, won't run any of the AB Tests");
       console.log("Running Control #1");
-      console.log("########################################");
-      window.triggerPromotion(12345 - 0);
-      window.dataLayer.push({
+      window.triggerPromotion(12345_0);
+      logAndPush("Ad Blocker Detected", {
         event: "test_seen",
         promotionName: "Ad Blocker Detected",
       });
@@ -35,23 +40,20 @@ function triggerTests() {
   if (tests) {
     const myTests = tests[Math.floor(Math.random() * tests.length)];
     if (myTests == "test1") {
-      console.log("Triggering Test #1 - Description TBD");
       window.triggerPromotion(12345_1);
-      window.dataLayer.push({
+      logAndPush("Triggering Test #1 - Description TBD", {
         event: "test_seen",
         promotionName: "Test #1 - Description TBD",
       });
     } else if (myTests == "test2") {
-      console.log("Triggering Test #2 - Description TBD");
       window.triggerPromotion(12345_2);
-      window.dataLayer.push({
+      logAndPush("Triggering Test #2 - Description TBD", {
         event: "test_seen",
         promotionName: "Test #2 - Description TBD",
       });
     } else if (myTests == "test3") {
-      console.log("Triggering Test #3 - Description TBD");
       window.triggerPromotion(12345_3);
-      window.dataLayer.push({
+      logAndPush("Triggering Test #3 - Description TBD", {
         event: "test_seen",
         promotionName: "Test #3 - Description TBD",
       });
@@ -59,9 +61,10 @@ function triggerTests() {
       console.log(
         "The test chosen is outside the array and nothing was triggered"
       );
-      console.log("########################################");
     }
   }
 }
 
+console.log("## AB Test Trigger Started #####################################");
 checkForAdblocker();
+console.log("## AB Test Trigger Ended #######################################");
