@@ -23,10 +23,10 @@ function checkForAdblocker() {
     } else if (testAdWidth == "0") {
       console.log("Adblocker detected, won't run any of the AB Tests");
       console.log("Running Control #1");
-      window.triggerPromotion(12345_0);
+      window.triggerTest(12345_0);
       logAndPush("Ad Blocker Detected", {
         event: "test_seen",
-        promotionName: "Ad Blocker Detected",
+        testName: "Ad Blocker Detected",
       });
     }
   }
@@ -40,22 +40,22 @@ function triggerTests() {
   if (tests) {
     const myTests = tests[Math.floor(Math.random() * tests.length)];
     if (myTests == "test1") {
-      window.triggerPromotion(12345_1);
+      window.triggerTest(12345_1);
       logAndPush("Triggering Test #1 - Description TBD", {
         event: "test_seen",
-        promotionName: "Test #1 - Description TBD",
+        testName: "Test #1 - Description TBD",
       });
     } else if (myTests == "test2") {
-      window.triggerPromotion(12345_2);
+      window.triggerTest(12345_2);
       logAndPush("Triggering Test #2 - Description TBD", {
         event: "test_seen",
-        promotionName: "Test #2 - Description TBD",
+        testName: "Test #2 - Description TBD",
       });
     } else if (myTests == "test3") {
-      window.triggerPromotion(12345_3);
+      window.triggerTest(12345_3);
       logAndPush("Triggering Test #3 - Description TBD", {
         event: "test_seen",
-        promotionName: "Test #3 - Description TBD",
+        testName: "Test #3 - Description TBD",
       });
     } else {
       console.log(
