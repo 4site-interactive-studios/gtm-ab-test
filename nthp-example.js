@@ -192,16 +192,16 @@ function triggerMultistepLightbox(donationUrl) {
   // Set the DonationLightboxOptions BEFORE loading the script
   // The script will check for this when it loads
   window.DonationLightboxOptions = {
-    name: "Super Ultra Mega Donation Lightbox",
+    name: "2025 EOY Multistep Donation Lightbox",
     url: donationUrl,
-    title: "Lorem ipsum dolor sit amet",
+    title: "Title ipsum dolor sit amet",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros diam.",
+      "Paragraph ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros.",
     image:
       "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10028/EN+Seasons+Greetings.png",
     logo: "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10028/multistep-logo.svg",
     footer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros diam.",
+      "Footer ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros.",
     mobile_enabled: true,
   };
 
