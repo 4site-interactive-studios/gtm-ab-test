@@ -195,6 +195,10 @@ function triggerMultistepLightbox(donationUrl) {
     name: "Super Ultra Mega Donation Lightbox",
     url: donationUrl,
     title: "Lorem ipsum dolor sit amet",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros diam.",
+    image:
+      "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10028/EN+Seasons+Greetings.png",
     logo: "https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10028/multistep-logo.svg",
     footer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate eros diam.",
